@@ -15,7 +15,7 @@ export default function TitlePage() {
         <li>LinkedIn</li>
       </ul>
 
-      <div className="location">Sydney</div>
+      <div className="based-in">Based in <span className='location'>Sydney</span></div>
     </div>
   );
 }
