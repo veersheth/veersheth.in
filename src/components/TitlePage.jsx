@@ -5,7 +5,7 @@ export default function TitlePage() {
     <div id="title-page">
       <div className="name ">
         <span className="first-name">VEER</span>
-        <span className="first-name">SHETH</span>
+        <span className="last-name">SHETH</span>
       </div>
 
       <ul className="socials">

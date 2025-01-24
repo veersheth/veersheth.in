@@ -7,9 +7,18 @@
   padding: auto 2rem;
 }
 
+.name {
+  position: absolute;
+  top: 0;
+}
+
 .name * {
   display: inline-block;
   font-size: 17vw;
+}
+
+.name .last-name {
+  font-weight: 500;
 }
 
 .socials {
