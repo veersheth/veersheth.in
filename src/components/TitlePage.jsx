@@ -4,8 +4,8 @@ export default function TitlePage() {
   return (
     <div id="title-page">
       <div className="name ">
-        <span className="first-name">VEER</span>
-        <span className="last-name">SHETH</span>
+        <span className="first-name">Veer</span>
+        <span className="last-name">Sheth</span>
       </div>
 
       <ul className="socials">

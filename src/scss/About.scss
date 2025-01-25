@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 #about-page {
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -6,12 +8,14 @@
 }
 
 .about-me {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   font-size: 1.6em;
   margin: auto;
   flex: 2;
   text-align: left;
   max-width: 75rem;
+  border: dotted 4px;
+  border-radius: 5rem;
 }
 
 .skill-list {
@@ -27,8 +31,10 @@
 
 .skill-pill {
   list-style: none;
-  background-color: #00000020;
-  padding: 0.8rem 1rem;
+  padding: 1rem 2rem;
+  border-color: #ffffff40;
+  background-color: $bg-neg;
+  color: $fg-neg;
   border-radius: 30px;
   width: fit-content;
   font-family: "Azeret Mono", monospace;
