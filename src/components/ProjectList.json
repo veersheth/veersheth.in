@@ -1,43 +1,43 @@
 [
   {
     "id": 0,
-    "name": "Python App Launcher",
+    "title": "Python App Launcher",
     "img": "imgPythonAppLauncher",
-    "description": "Brutally minimal multi-app launcher based on tKinter, Python"
+    "description": "Brutally minimal multi-app launcher based on tKinter, Python."
   },
   {
     "id": 1,
-    "name": "Keeper",
+    "title": "Keeper",
     "img": "imgKeeper",
-    "description": "A basic Google Keep clone written as practice for ReactJS"
+    "description": "A basic Google Keep clone written as practice for ReactJS."
   },
   {
     "id": 2,
-    "name": "Pyssword Manager",
-    "img": "imgPyssword",
-    "description": "Python based un-encrypted commandline password manager. Written as practice for SQL integration with Python"
+    "title": "Pyssword Manager",
+    "img": "imgPysswordManager",
+    "description": "Python based un-encrypted commandline password manager. Written as practice for SQL integration with Python."
   },
   {
     "id": 3,
-    "name": "The Brown Fox",
+    "title": "The Brown Fox",
     "img": "imgTheBrownFox",
-    "description": "A simple typing game with a timer and a very minimal, aesthetically pleasing UI"
+    "description": "A simple typing game with a timer and a very minimal, aesthetically pleasing UI."
   },
   {
     "id": 4,
-    "name": "Flutter Chat",
+    "title": "Flutter Chat",
     "img": "imgFlutterChat",
-    "description": "A basic group chat application based on Flutter, Firebase and Material Design 3. Can be built for Android and iOS"
+    "description": "A basic group chat application based on Flutter, Firebase and Material Design 3. Can be built for Android and iOS."
   },
   {
     "id": 5,
-    "name": "Alt-Click to Copy",
+    "title": "Alt-Click to Copy",
     "img": "imgAltClickToCopy",
-    "description": "Plugin for Obsidian.md that quickly copies code snippets to the clipboard by holding the Alt modifier key. Built using TypeScript"
+    "description": "Plugin for Obsidian.md that quickly copies code snippets to the clipboard by holding the Alt modifier key. Built using TypeScript."
   },
   {
     "id": 5,
-    "name": "Meditator",
+    "title": "Meditator",
     "img": "imgMeditator",
     "description": "A minimal timer based meditation app that gamifies the acitivity. Points are scored when completing a meditation and lost when failed to do so. Based on Flutter and MaterialUI."
   }

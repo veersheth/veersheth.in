@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+#projects-page {
+  background-color: $bg-neg;
+  color: $fg-neg;
+  padding: 1rem;
+  min-height: 30vh;
+  border-radius: 40px 40px 0 0px;
+}
+
+.projects-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: min-content;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  scrollbar-width: none;
+  --ms-overflow-style: none;
+}
+
+.project {
+  display: inline-block;
+  // background-color: white;
+  // color: black;
+  height: fit-content;
+  width: 20rem;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 25px;
+}
+
+.project img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  border-style: dotted;
+  border-width: 4px;
+  border-color: white;
+  border-radius: 40px;
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-top: 0.8rem;
+  font-family: "Azeret Mono";
+  margin-bottom: 0.8rem;
+}
+
+.project-description {
+  max-width: 20rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
