@@ -30,27 +30,27 @@
 }
 
 .socials {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  top: 0;
   left: 0;
   display: flex;
   flex-direction: row;
   gap: 1rem;
   list-style-type: none;
-  margin: auto auto 2rem 1rem;
+  margin: 1.2rem 1rem;
 }
 
 .email {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  margin: 1.2rem 0;
 }
 
 .based-in {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  top: 0;
   right: 0;
-  margin: auto 1rem 2rem auto;
+  margin: 1.2rem 1rem;
 }
 
 .location {
