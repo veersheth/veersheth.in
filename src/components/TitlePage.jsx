@@ -9,11 +9,13 @@ export default function TitlePage() {
       </div>
 
       <ul className="socials">
-        <li>Resume</li>
-        <li>GitHub</li>
-        <li>Blog</li>
-        <li>LinkedIn</li>
+        <li><a href="/" about="_blank">Resume</a></li>
+        <li><a href="/" about="_blank">GitHub</a></li>
+        <li><a href="/" about="_blank">Blog</a></li>
+        <li><a href="/" about="_blank">LinkedIn</a></li>
       </ul>
+
+      <div className='email'><a href="mailto:veerksheth@gmail.com">Let's talk</a></div>
 
       <div className="based-in">Based in <span className='location'>Sydney</span></div>
     </div>
