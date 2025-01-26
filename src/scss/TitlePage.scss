@@ -24,11 +24,16 @@
   border-width: 4px;
   border-radius: 8rem;
   padding: 2rem 3rem;
-  transform: scale(1);
+  transition: transform 500ms ease;
+  cursor: pointer;
 }
 
 .last-name:hover {
-  transform: scale(2);
+  transform: scale(1.05);
+}
+
+.last-name:active {
+  transform: scale(1.1, 1);
 }
 
 .socials {

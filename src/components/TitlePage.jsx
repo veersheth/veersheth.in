@@ -15,11 +15,17 @@ export default function TitlePage() {
     };
   }, []);
 
+  const handleLastNameClick = () => {
+    const newColor = "#" + Math.floor(Math.random() * 16777215).toString(16); // Random color
+    window.dispatchEvent(new CustomEvent("changeBlobColor", { detail: { color: newColor } }));
+  };
+
   return (
     <section id="title-page">
-      <div className="name ">
-        <span className="first-name" data-aos-delay="500" data-aos="fade-right">Veer</span>
-        <span className="last-name glass" data-aos-delay="600" data-aos="fade-left">Sheth</span>
+      <div className="name"  data-aos="fade-right">
+        <span className="first-name" >Veer</span>
+        <span className="last-name glass" onClick={handleLastNameClick}
+        >Sheth</span>
       </div>
 
       <ul className="socials">

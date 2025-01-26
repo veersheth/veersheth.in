@@ -23,6 +23,7 @@
   -ms-filter: blur(8vw);
   overflow: none;
   animation: squish ease-in-out infinite alternate;
+  transition: background-color 300ms linear;
 }
 
 @keyframes squish {
