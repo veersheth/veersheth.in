@@ -16,7 +16,7 @@
   color: #ffffff80;
 }
 
-.name .last-name {
+.last-name {
   text-align: right;
   margin-left: 20vw;
   border-right: dotted;
@@ -24,6 +24,11 @@
   border-width: 4px;
   border-radius: 8rem;
   padding: 2rem 3rem;
+  transform: scale(1);
+}
+
+.last-name:hover {
+  transform: scale(2);
 }
 
 .socials {

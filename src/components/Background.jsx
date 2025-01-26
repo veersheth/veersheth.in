@@ -21,8 +21,10 @@ const Background = () => {
 
         const blob = document.createElement('div');
         blob.className = 'blob';
-        blob.style.width = `${size}vw`;
-        blob.style.height = `${size}vw`;
+
+        blob.style.width = `${size}${window.innerWidth > window.innerHeight ? 'vw' : 'vh'}`;
+        blob.style.height = `${size}${window.innerWidth > window.innerHeight ? 'vw' : 'vh'}`;
+        //blob.style.height = `${size}vw`;
         blob.style.top = top;
         blob.style.left = left;
         blob.style.animationDuration = duration;
