@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const Background = () => {
   useEffect(() => {
     const generateRandomStyles = () => {
-      const size = Math.random() * 8 + 14;
+      const size = Math.random() * 10 + 14;
       const top = Math.random() * 100 + "%";
       const left = Math.random() * 100 + "%";
       const duration = Math.random() * 8 + 5 + "s";
