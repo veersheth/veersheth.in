@@ -3,42 +3,49 @@
     "id": 0,
     "title": "Python App Launcher",
     "img": "imgPythonAppLauncher",
+    "website": "https://github.com/veersheth/python-app-launcher/",
     "description": "Brutally minimal multi-app launcher based on tKinter, Python."
   },
   {
     "id": 1,
     "title": "Keeper",
     "img": "imgKeeper",
+    "website": "https://github.com/veersheth/keeper-app",
     "description": "A basic Google Keep clone written as practice for ReactJS."
   },
   {
     "id": 2,
     "title": "Pyssword Manager",
     "img": "imgPysswordManager",
+    "website": "https://github.com/veersheth/pyssword-manager-cli",
     "description": "Python based un-encrypted commandline password manager. Written as practice for SQL integration with Python."
   },
   {
     "id": 3,
     "title": "The Brown Fox",
     "img": "imgTheBrownFox",
+    "website": "https://veersheth.github.io/The-Brown-Fox",
     "description": "A simple typing game with a timer and a very minimal, aesthetically pleasing UI."
   },
   {
     "id": 4,
     "title": "Flutter Chat",
     "img": "imgFlutterChat",
+    "website": "https://github.com/veersheth/flutter-chat",
     "description": "A basic group chat application based on Flutter, Firebase and Material Design 3. Can be built for Android and iOS."
   },
   {
     "id": 5,
     "title": "Alt-Click to Copy",
     "img": "imgAltClickToCopy",
+    "website": "https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/alt-click-to-copy",
     "description": "Plugin for Obsidian.md that quickly copies code snippets to the clipboard by holding the Alt modifier key. Built using TypeScript."
   },
   {
     "id": 5,
     "title": "Meditator",
     "img": "imgMeditator",
+    "website": "https://github.com/veersheth/meditator",
     "description": "A minimal timer based meditation app that gamifies the acitivity. Points are scored when completing a meditation and lost when failed to do so. Based on Flutter and MaterialUI."
   }
 

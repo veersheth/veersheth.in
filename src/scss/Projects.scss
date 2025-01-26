@@ -30,7 +30,16 @@
   padding: 1rem 2rem;
   margin: 1rem;
   border-radius: 25px;
+  cursor: pointer;
+  transition: transform 300ms ease;
 }
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project:active { transform: scale(1.05, 1);
+  }
 
 .project img {
   height: 15rem;

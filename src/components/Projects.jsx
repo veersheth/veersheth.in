@@ -18,6 +18,7 @@ export default function Projects() {
               title={p.title}
               description={p.description}
               image={`/images/${p.img}.png`}
+              website={p.website}
             />
           ))}
       </ul>
