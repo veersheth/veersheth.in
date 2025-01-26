@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
-@import './scss/variables.scss';
+@import "./scss/variables.scss";
 
 * {
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 
 ::selection {
-  background-color: #b3a4c3;
+  // background-color: #b3a4c3;
+  background-color: #f67182;
   color: black;
 }
 
@@ -21,19 +23,23 @@ body {
   font-weight: 450;
   font-size: 1.1rem;
   font-family: "Quicksand", sans-serif;
+  // background-color: $bg-pos;
+  // color: $fg-pos;
+  background-color: #101010;
+  color: white;
 }
 
-#app {
-  background-color: $bg-pos;
-  color: $fg-pos;
+.glass {
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+}
+
+section {
+  z-index: 1;
 }
 
 a {
   text-decoration: underline;
   color: inherit;
   transition: transform 400ms ease;
-}
-
-a:hover {
-  transform: scale(2) skewX(-10deg);
 }

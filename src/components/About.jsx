@@ -29,8 +29,8 @@ export default function About() {
   ];
 
   return (
-    <div id="about-page">
-      <div className="about-me">
+    <section id="about-page">
+      <div className="about-me glass">
         I am a second year <span className="bold">Computer Science</span>{" "}
         student studying at the{" "}
         <span className="bold">University of New South Wales</span>. At the age
@@ -50,6 +50,6 @@ export default function About() {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 }

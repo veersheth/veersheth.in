@@ -6,7 +6,7 @@ export default function Projects() {
  let count = 0;
 
   return (
-    <div id="projects-page">
+    <section id="projects-page">
       <ul className="projects-list">
         {ProjectList.slice()
           .reverse()
@@ -22,6 +22,6 @@ export default function Projects() {
           ))}
       </ul>
       <div className="projects-title">{"Projects"}</div>
-    </div>
+    </section>
   );
 }

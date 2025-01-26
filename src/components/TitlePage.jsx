@@ -5,26 +5,21 @@ export default function TitlePage() {
   const [screenResolution, setScreenResolution] = useState(`${window.innerWidth}x${window.innerHeight}`);
   const currentYear = new Date().getFullYear();
 
-  // Update screen resolution when the window is resized
   useEffect(() => {
     const handleResize = () => {
       setScreenResolution(`${window.innerWidth}x${window.innerHeight}`);
     };
-
-    // Attach the resize event listener
     window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
-    <div id="title-page">
+    <section id="title-page">
       <div className="name ">
         <span className="first-name" data-aos-delay="500" data-aos="fade-right">Veer</span>
-        <span className="last-name" data-aos-delay="600" data-aos="fade-left">Sheth</span>
+        <span className="last-name glass" data-aos-delay="600" data-aos="fade-left">Sheth</span>
       </div>
 
       <ul className="socials">
@@ -38,14 +33,10 @@ export default function TitlePage() {
 
       <div className="based-in">Based in <span className='location'>Sydney</span></div>
 
-      <div className="year">
-        {currentYear}
-      </div>
+      <div className="year"> {currentYear} </div>
 
-      <div className="screen-resolution">
-        {screenResolution}
-      </div>
-    </div>
+      <div className="screen-resolution"> {screenResolution} </div>
+    </section>
   );
 }
 
