@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 #background {
   z-index: -1;
   position: fixed;
@@ -10,13 +12,16 @@
   //     transparent 1px);
   // background-size: 200px 100%;
   pointer-events: none;
+  background-color: black;
 }
 
 .blob {
   position: absolute;
   border-radius: 50%;
-  background: #87a5c980;
-  filter: blur(30vw);
+  background: $accent;
+  filter: blur(4vw);
+  -ms-filter: blur(8vw);
+  overflow: none;
   animation: squish ease-in-out infinite alternate;
 }
 

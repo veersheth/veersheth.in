@@ -13,6 +13,13 @@
   color: black;
 }
 
+#app {
+  // backdrop-filter: blur(5vw);
+  // -webkit-backdrop-filter: blur(10vw);
+  // overflow: none;
+  // background-color: red;
+}
+
 .bold {
   font-weight: 800;
   display: inline;
@@ -30,8 +37,8 @@ body {
 }
 
 .glass {
-  backdrop-filter: blur(60px);
-  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(10vw);
+  -webkit-backdrop-filter: blur(20vw);
 }
 
 section {

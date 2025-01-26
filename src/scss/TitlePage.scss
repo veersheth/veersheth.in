@@ -10,8 +10,8 @@
 
 .name * {
   font-family: "Azeret Mono";
-  font-size: 14vw;
-  line-height: 12vw;
+  font-size: 12vw;
+  line-height: 10vw;
   display: block;
   color: #ffffff80;
 }
@@ -64,7 +64,12 @@
   margin-bottom: 1rem;
   margin-left: 2rem;
 }
-    
+     
+.scroll-hint  {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+}   
 .screen-resolution  {
   position: absolute;
   bottom: 0;

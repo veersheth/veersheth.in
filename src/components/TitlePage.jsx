@@ -34,6 +34,8 @@ export default function TitlePage() {
       <div className="based-in">Based in <span className='location'>Sydney</span></div>
 
       <div className="year"> {currentYear} </div>
+      
+      <div className='scroll-hint'>Scroll ￬</div>
 
       <div className="screen-resolution"> {screenResolution} </div>
     </section>

@@ -20,8 +20,8 @@ function App() {
         <TitlePage />
         <About />
         <Projects />
-        <Background />
       </div>
+    <Background />
     </ReactLenis>
   );
 }
