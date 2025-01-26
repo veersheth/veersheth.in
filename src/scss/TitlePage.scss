@@ -8,7 +8,6 @@
   position: relative; 
   background-color: $bg-pos;
   color: $fg-pos;
-  // background-image: linear-gradient($acc-pos, white);
 }
 
 .name * {
@@ -16,7 +15,6 @@
   font-size: 14vw;
   line-height: 12vw;
   display: block;
-  // background-color: red;
 }
 
 .name .last-name {
@@ -58,4 +56,20 @@
   background-color: #00000020;
   padding: 0.5rem 0.75rem;
   border-radius: 2rem;
+}
+
+.year {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+    
+.screen-resolution  {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
 }
