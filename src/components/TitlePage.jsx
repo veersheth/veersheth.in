@@ -10,9 +10,9 @@ export default function TitlePage() {
 
       <ul className="socials">
         <li><a href="/" about="_blank">Resume</a></li>
-        <li><a href="/" about="_blank">GitHub</a></li>
-        <li><a href="/" about="_blank">Blog</a></li>
-        <li><a href="/" about="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/veersheth/" about="_blank">GitHub</a></li>
+        <li><a href="https://veersheth.medium.com/" about="_blank">Blog</a></li>
+        <li><a href="https://au.linkedin.com/in/veersheth" about="_blank">LinkedIn</a></li>
       </ul>
 
       <div className='email'><a href="mailto:veerksheth@gmail.com">Let's talk</a></div>
