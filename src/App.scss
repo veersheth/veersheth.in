@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+::selection {
+  background-color: #b3a4c3;
+  color: black;
+}
+
 .bold {
   font-weight: 800;
   display: inline;
