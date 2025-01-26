@@ -44,7 +44,7 @@ export default function About() {
       <div className="skills">
         <ul className="skill-list">
           {skills.map((skill, index) => (
-            <li key={index} className="skill-pill">
+            <li key={index} data-aos="zoom-in-up" className="skill-pill">
               {skill}
             </li>
           ))}
