@@ -1,0 +1,60 @@
+@media only screen and (max-width: 768px) {
+  #title-page {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: right !important;
+  }
+
+  #title-page * {
+    padding: 0 !important;
+    text-align: right;
+  }
+
+  .name {
+    margin-bottom: 2rem !important;
+    position: absolute !important;
+    bottom: 0 !important;
+  }
+
+  .name * {
+    text-align: left !important;
+    font-size: 24vw !important;
+    line-height: 16vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .first-name {
+    font-weight: 200 !important;
+  }
+
+  .last-name {
+    cursor: pointer !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    font-weight: 800 !important;
+    margin-top: 2rem !important;
+  }
+
+  .scroll-hint,
+  .screen-resolution,
+  .year {
+    display: none;
+  }
+
+  .socials,
+  .email,
+  .based-in {
+    position: relative !important;
+    flex-direction: column !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: 4rem;
+    padding: 0 !important;
+  }
+
+  .email {
+    margin-right: 1rem !important;
+  }
+}

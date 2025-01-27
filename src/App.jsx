@@ -1,5 +1,6 @@
 import Aos from "aos";
 import "./App.scss";
+import "./scss/mobile.scss"
 import About from "./components/About";
 import Projects from "./components/Projects";
 import TitlePage from "./components/TitlePage";
