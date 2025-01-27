@@ -19,8 +19,8 @@
   position: absolute;
   border-radius: 50%;
   background: $accent;
-  filter: blur(4vw);
-  -ms-filter: blur(8vw);
+  filter: blur(8vw);
+  -ms-filter: blur(10vw);
   overflow: none;
   animation: squish ease-in-out infinite alternate;
   transition: background-color 300ms linear;
