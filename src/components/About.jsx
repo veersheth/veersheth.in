@@ -24,8 +24,6 @@ export default function About() {
     "Bootstrap",
     "Express",
     "GIMP",
-    "Lua",
-    "(Neo)vim"
   ];
 
   return (
