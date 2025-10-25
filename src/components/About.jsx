@@ -34,7 +34,9 @@ export default function About() {
       <div className="about-me glass">
         I am a final year <span className="bold">Computer Science</span>{" "}
         student studying at the <span className="bold">University of New South Wales</span>. 
-        I love working with technology, websites, robots, Linux, open-source software, the works. I also help teach COMP1531 at UNSW. The following are some "skills" I've picked up. 
+        I love working with technology, websites, robots, Linux, open-source
+        software, the works. I also help teach <span className="bold">COMP1531</span> at UNSW. 
+        The following are some "skills" I've picked up. 
       </div>
 
       <div className="skills">
