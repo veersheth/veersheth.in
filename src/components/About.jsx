@@ -2,41 +2,39 @@ import "../scss/About.scss";
 
 export default function About() {
   const skills = [
+    "JavaScript",
     "HTML",
     "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Python",
-    "Dart",
-    "C",
-    "Java",
-    "Flutter",
-    "Firebase",
     "ReactJS",
-    "ViteJS",
-    "Git(Hub)",
-    "Figma",
+    "Svelte",
+    "NextJS",
+    "HTMX",
+    "Python",
+    "OpenCV",
+    "PyTorch",
+    "TensorFlow",
+    "C",
+    "C++",
+    "ROS2",
+    "Rust",
+    "Java",
     "Bash",
+    "Dart",
+    "Lua",
+    "VimScript",
+    "Git(Hub)(Lab)",
+    "Figma",
     "MIPS",
     "GNU/Linux",
-    "Tailwind CSS",
-    "MaterialUI",
-    "Bootstrap",
-    "Express",
-    "GIMP",
+    "Big Time Prompt Engineer this is a joke",
   ];
 
   return (
     <section id="about-page">
       <div className="about-me glass">
-        I am a second year <span className="bold">Computer Science</span>{" "}
-        student studying at the{" "}
-        <span className="bold">University of New South Wales</span>. At the age
-        of 5, I learnt what a .txt file was. At the age of 15, I started{" "}
-        <span className="bold">developing websites</span> as a hobby. As far as
-        further education goes, my vague plans are to pursue research in{" "}
-        <span className="bold">artificial intelligence</span>. Here is a list of
-        tools and technologies that I am currently familiar with...
+        I am a final year <span className="bold">Computer Science</span>{" "}
+        student studying at the <span className="bold">University of New South Wales</span>. 
+        I love working with technology, websites, robots, Linux, open-source software, the works. I also help teach COMP1531 at UNSW. The following are some "skills" I've picked up. 
       </div>
 
       <div className="skills">

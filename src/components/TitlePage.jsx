@@ -37,7 +37,7 @@ export default function TitlePage() {
 
       <div className='email'><a href="mailto:veerksheth@gmail.com">Let's talk</a></div>
 
-      <div className="based-in">Based in <span className='location'>Sydney</span></div>
+      <div className="based-in">Sydney</div>
 
       <div className="year"> {currentYear} </div>
       

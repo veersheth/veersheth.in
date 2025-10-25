@@ -31,11 +31,11 @@
   margin: 1rem;
   border-radius: 25px;
   cursor: pointer;
-  transition: transform 300ms ease;
+  transition: transform 300ms ease, background-color 300ms ease;
 }
 
 .project:hover {
-  transform: scale(1.02);
+  transform: scale(1.02) rotate(-2deg);
 }
 
 .project:active { transform: scale(1.05, 1);

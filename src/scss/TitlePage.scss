@@ -18,6 +18,7 @@
 
 .last-name {
   text-align: right;
+  background-color: rgba(0, 0, 0, 0.2);
   margin-left: 20vw;
   border-right: dotted;
   border-left: dotted;
@@ -29,7 +30,7 @@
 }
 
 .last-name:hover {
-  transform: scale(1.05);
+  transform: scale(1.03) rotate(-1deg);
 }
 
 .last-name:active {

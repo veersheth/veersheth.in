@@ -15,6 +15,7 @@ function App() {
     ease: "ease-in-out",
   });
   return (
+    <div>
     <ReactLenis root>
       <div id="app">
         <TitlePage />
@@ -23,6 +24,7 @@ function App() {
       </div>
       <Background />
     </ReactLenis>
+  </div>
   );
 }
 
