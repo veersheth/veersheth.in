@@ -25,13 +25,12 @@
   border-width: 4px;
   border-radius: 8rem;
   padding: 2rem 3rem;
-  transition: transform 900ms ease, padding 900ms ease;
+  transition: transform 900ms ease;
   cursor: pointer;
 }
 
 .last-name:hover {
   transform: scale(1.03) rotate(-4deg);
-  padding: 4rem;
 }
 
 .last-name:active {
