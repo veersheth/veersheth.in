@@ -7,7 +7,7 @@ export default function Project(props) {
 
   return (
     <li className="project" onClick={handleClick}>
-      <div data-aos="fade-up" data-aos-delay={`${props.count * 150}`}>
+      <div data-aos="fade-up"> 
         <img src={props.image} alt={props.title} />
         <div className="project-title">{props.title}</div>
         <div className="project-description">{props.description}</div>

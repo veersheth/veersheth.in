@@ -7,6 +7,7 @@ export default function Projects() {
 
   return (
     <section id="projects-page" className="glass">
+      <div className="projects-title">{"Projects"}</div>
       <ul className="projects-list">
         {ProjectList.slice()
           .reverse()
@@ -22,8 +23,6 @@ export default function Projects() {
             />
           ))}
       </ul>
-      <div className="scroll-projects-indicator">Scroll →</div>
-      <div className="projects-title">{"Projects"}</div>
     </section>
   );
 }
