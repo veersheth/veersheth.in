@@ -47,6 +47,12 @@
     "img": "imgMeditator",
     "website": "https://github.com/veersheth/meditator",
     "description": "A minimal timer based meditation app that gamifies the acitivity. Points are scored when completing a meditation and lost when failed to do so. Based on Flutter and MaterialUI."
+  },{
+    "id": 6,
+    "title": "Quarry",
+    "img": "imgQuarry",
+    "website": "https://github.com/veersheth/quarry",
+    "description": "A do-all application written in Rust/Svelte. Works as an application launcher, calculator, clipboard manager, color picker, etc etc. Developed because I was bored enough to look for an app that does what I want on Linux."
   }
 
 ]
