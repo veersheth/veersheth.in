@@ -30,9 +30,35 @@
   padding: 1rem 2rem 2rem;
   border-radius: 4rem;
   cursor: pointer;
+  transition: all 400ms ease;
 }
 
-.project:active { transform: scale(1.05, 1); }
+.project:hover {
+  transform: scale(1.03, 1);
+}
+
+
+.project::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  background: radial-gradient(circle,
+       white 0%,
+      rgba(255, 255, 255, 0) 50%);
+
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.project:hover::after {
+  opacity: 0.2;
+}
 
 .project img {
   height: 15rem;
@@ -54,9 +80,6 @@
 .project-description {
   max-width: 20rem;
   white-space: normal;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  hyphens: auto;
 }
 
 .scroll-projects-indicator {

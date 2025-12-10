@@ -52,7 +52,7 @@
     "title": "Quarry",
     "img": "imgQuarry",
     "website": "https://github.com/veersheth/quarry",
-    "description": "A do-all application written in Rust/Svelte. Works as an application launcher, calculator, clipboard manager, color picker, etc etc. Developed because I was bored enough to look for an app that does what I want on Linux."
+    "description": "A do-all application written in Rust/Svelte. Application launcher, calculator, clipboard manager, color picker, etc etc. Developed because I was too lazy to look for another app that does exactly what I want. "
   }
 
 ]
