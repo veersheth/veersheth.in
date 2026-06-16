@@ -1,17 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veer Sheth</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="hello">
+      <div class="name-row">
+        <div class="name-circle-wrapper"><div class="name-circle"></div></div>
+        <div class="name">Veer Sheth</div>
+      </div>
+      <div class="hello-content">
+        <div class="about">Third year Computer Science student at University of New South Wales. Course faculty member for COMP1531 Software Engineering Fundamentals. Based in Sydney. </div>
+        <div class="links">
+          <button class="contact link copy-email" data-email="hello@veersheth.com">Email</button>
+          <a class="contact link" href="" target="_blank">Resume</a>
+          <a class="contact link" href="https://veersheth.medium.com/" target="_blank">Blog</a>
+          <a class="contact link" href="https://github.com/veersheth" target="_blank">GitHub</a>
+          <a class="contact link" href="https://linkedin.com/in/veersheth" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veer Sheth</title>
-</head>
+    <div class="projects">
+      <div class="projects-list">
+        <div class="project-card" data-skills="Tauri,Rust,Svelte,Figma" data-url="https://github.com/veersheth/quarry">
+          <div class="project-card-title">Quarry</div>
+          <div class="project-card-description">Centralized app launcher, clipboard manager, calculator, file searcher, color picker, currency converter, AI interface, shortcut manager, rofi replacement, dictionary for Linux.</div>
+        </div>
+        <div class="project-card" data-skills="Flutter,Dart" data-url="https://github.com/veersheth/meditator">
+          <div class="project-card-title">Meditator</div>
+          <div class="project-card-description">A minimal timer based meditation app that gamifies the activity. Points are scored when completing a meditation and lost when failed to do so.</div>
+        </div>
+        <div class="project-card" data-skills="TypeScript" data-url="https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/Plugins/alt-click-to-copy">
+          <div class="project-card-title">Alt-Click to Copy</div>
+          <div class="project-card-description">Plugin for Obsidian.md that quickly copies code snippets to the clipboard by holding the Alt modifier key.</div>
+        </div>
+      </div>
+      <div class="projects-controls">
+        <button class="projects-btn projects-prev">←</button>
+        <button class="projects-btn projects-next">→</button>
+      </div>
+    </div>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <div class="skills">
+      <div class="heading">Primary Tools</div>
+      <div class="pills">
+        <span class="pill">Svelte</span>
+        <span class="pill">Rust</span>
+        <span class="pill">Python</span>
+        <span class="pill">Lua</span>
+        <span class="pill">C</span>
+        <span class="pill">C++</span>
+        <span class="pill">Tauri</span>
+        <span class="pill">Git</span>
+        <span class="pill">Linux</span>
+        <span class="pill">Bash</span>
+        <span class="pill">Flutter</span>
+        <span class="pill">Tailwind</span>
+        <span class="pill">NextJS</span>
+        <span class="pill">Neovim</span>
+        <span class="pill">Figma</span>
+        <span class="pill">GitHub</span>
+      </div>
+    </div>
 
+    <div class="more-skills">
+      <div class="heading">Also</div>
+      <div class="pills">
+        <span class="pill">TypeScript</span>
+        <span class="pill">Vite </span>
+        <span class="pill">ReactJS</span>
+        <span class="pill">SQL </span>
+        <span class="pill">Typst</span>
+        <span class="pill">LaTeX </span>
+        <span class="pill">Kotlin </span>
+        <span class="pill">Dart </span>
+        <span class="pill">Nix</span>
+        <span class="pill">HTMX</span>
+        <span class="pill">Numpy</span>
+        <span class="pill">Pandas</span>
+        <span class="pill">OpenCV</span>
+        <span class="pill">PyTorch</span>
+        <span class="pill">PySide6</span>
+        <span class="pill">TensorFlow</span>
+        <span class="pill">ROS2</span>
+        <span class="pill">Java</span>
+        <span class="pill">VimScript</span>
+        <span class="pill">MIPS</span>
+      </div>
+    </div>
+
+
+    <div class="footer"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
