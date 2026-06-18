@@ -214,6 +214,12 @@ body {
   font-weight: 500;
 }
 
+.project-card-title::after {
+  content: ' ↗';
+  text-decoration: none;
+  display: inline-block;
+}
+
 .project-card-description {
   font-size: var(--font-size);
   font-weight: 300;
@@ -278,6 +284,7 @@ body {
   padding: 0;
   border-radius: 0;
 }
+
 
 .footer {
   font-size: var(--font-size);
