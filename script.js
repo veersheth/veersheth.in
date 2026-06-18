@@ -1,3 +1,27 @@
+function scramble(el) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*?';
+  const original = el.textContent;
+  const duration = 2000;
+  const frameRate = 35;
+  const totalFrames = duration / frameRate;
+  let frame = 0;
+
+  const interval = setInterval(() => {
+    el.textContent = original.split('').map((char, i) => {
+      if (char === ' ') return ' ';
+      if (frame >= (i / original.length) * totalFrames) return char;
+      return chars[Math.floor(Math.random() * chars.length)];
+    }).join('');
+
+    if (++frame > totalFrames) {
+      el.textContent = original;
+      clearInterval(interval);
+    }
+  }, frameRate);
+}
+
+setTimeout(() => scramble(document.querySelector('.about')), 300);
+
 document.querySelector('.copy-email').addEventListener('click', function () {
   const email = this.dataset.email;
   navigator.clipboard.writeText(email).then(() => {
