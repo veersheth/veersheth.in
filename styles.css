@@ -16,6 +16,23 @@
   --border-color-subtle: rgba(255, 255, 255, 0.15);
 }
 
+@keyframes rise-and-shake {
+  0%   { transform: translateY(0px)   translateX(0px); }
+  8%   { transform: translateY(-5px)  translateX(-3px); }
+  16%  { transform: translateY(-10px) translateX(3px); }
+  24%  { transform: translateY(-14px) translateX(-3px); }
+  32%  { transform: translateY(-18px) translateX(3px); }
+  40%  { transform: translateY(-21px) translateX(-3px); }
+  48%  { transform: translateY(-24px) translateX(3px); }
+  56%  { transform: translateY(-26px) translateX(-2px); }
+  64%  { transform: translateY(-27px) translateX(2px); }
+  72%  { transform: translateY(-28px) translateX(-2px); }
+  80%  { transform: translateY(-29px) translateX(2px); }
+  88%  { transform: translateY(-30px) translateX(-1px); }
+  94%  { transform: translateY(-30px) translateX(1px); }
+  100% { transform: translateY(-30px) translateX(0px); }
+}
+
 @keyframes blur-in {
   from {
     filter: blur(12px);

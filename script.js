@@ -39,86 +39,118 @@ document.querySelector('.projects-next').addEventListener('click', () => {
   projectsList.scrollBy({ left: projectsList.querySelector('.project-card').offsetWidth, behavior: 'smooth' });
 });
 
-function circleGoesRogue() {
-  const circle = document.querySelector('.name-circle');
-  const rect = circle.getBoundingClientRect();
-  const radius = circle.offsetWidth / 2;
 
-  const rogue = document.createElement('div');
-  rogue.style.cssText = `
-    position: fixed;
-    width: ${radius * 2}px;
-    height: ${radius * 2}px;
-    border-radius: 50%;
-    background: var(--accent);
-    left: ${rect.left}px;
-    top: ${rect.top}px;
-    z-index: 9999;
-    pointer-events: none;
-  `;
-  document.body.appendChild(rogue);
-  circle.style.opacity = '0';
+let isFalling = false;
 
-  const { Engine, Bodies, Composite, Body } = Matter;
-  const W = window.innerWidth;
-  const H = window.innerHeight;
-  const T = 100;
+function everythingFalls() {
+  if (isFalling) return;
+  isFalling = true;
 
-  const engine = Engine.create({ gravity: { y: 2 } });
+  const els = [...document.querySelectorAll('.name-row, .about, .links, .project-card, .pill, .heading, .projects-btn')];
+  const savedStyles = els.map(el => el.getAttribute('style') || '');
+  const homeRects = els.map(el => el.getBoundingClientRect());
 
-  const ball = Bodies.circle(rect.left + radius, rect.top + radius, radius, {
-    restitution: 0.7,
-    frictionAir: 0.01,
+  // phase 1: rise with shake
+  els.forEach(el => {
+    el.style.animation = 'rise-and-shake 1s ease forwards';
   });
-  Body.setVelocity(ball, { x: (Math.random() - 0.5) * 20, y: -12 });
 
-  Composite.add(engine.world, [
-    ball,
-    Bodies.rectangle(W / 2, H + T / 2, W * 2, T, { isStatic: true }),
-    Bodies.rectangle(-T / 2, H / 2, T, H * 2, { isStatic: true }),
-    Bodies.rectangle(W + T / 2, H / 2, T, H * 2, { isStatic: true }),
-    Bodies.rectangle(W / 2, -T / 2, W * 2, T, { isStatic: true }),
-  ]);
+  setTimeout(() => {
+    const { Engine, Bodies, Composite, Body } = Matter;
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    const T = 100;
 
-  let rafId;
-  const start = performance.now();
-  const duration = 4000;
+    const engine = Engine.create({ gravity: { y: 2 }, enableSleeping: true });
 
-  function step(now) {
-    Engine.update(engine, 1000 / 60);
-    rogue.style.left = (ball.position.x - radius) + 'px';
-    rogue.style.top = (ball.position.y - radius) + 'px';
+    Composite.add(engine.world, [
+      Bodies.rectangle(W / 2, H + T / 2, W * 2, T, { isStatic: true }),
+      Bodies.rectangle(W / 2, -T / 2,    W * 2, T, { isStatic: true }),
+      Bodies.rectangle(-T / 2, H / 2,    T, H * 2, { isStatic: true }),
+      Bodies.rectangle(W + T / 2, H / 2, T, H * 2, { isStatic: true }),
+    ]);
 
-    if (now - start >= duration) {
+    const items = els.map((el, i) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return null;
+
+      el.style.animation = 'none';
+      el.style.transition = 'none';
+      el.style.transform = 'none';
+      el.style.position = 'fixed';
+      el.style.left = rect.left + 'px';
+      el.style.top = rect.top + 'px';
+      el.style.width = rect.width + 'px';
+      el.style.height = rect.height + 'px';
+      el.style.margin = '0';
+      el.style.zIndex = '999';
+      el.style.boxSizing = 'border-box';
+      el.style.transformOrigin = 'center center';
+
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const body = Bodies.rectangle(cx, cy, rect.width, rect.height, {
+        restitution: 0.65, frictionAir: 0.008, friction: 0.05,
+        sleepThreshold: 30,
+      });
+
+      const dx = cx - W / 2;
+      const dy = cy - H / 2;
+      const len = Math.sqrt(dx * dx + dy * dy) || 1;
+      const speed = 15 + Math.random() * 20;
+      Body.setVelocity(body, {
+        x: (dx / len) * speed * (0.5 + Math.random()),
+        y: -18 - Math.random() * 18,
+      });
+      Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.4);
+      Composite.add(engine.world, body);
+
+      return { el, body, rect, home: homeRects[i], savedStyle: savedStyles[i] };
+    }).filter(Boolean);
+
+    const start = performance.now();
+    let rafId;
+
+    function step(now) {
+      Engine.update(engine, 1000 / 60);
+      items.forEach(({ el, body, rect }) => {
+        el.style.left = (body.position.x - rect.width / 2) + 'px';
+        el.style.top = (body.position.y - rect.height / 2) + 'px';
+        el.style.transform = `rotate(${body.angle}rad)`;
+      });
+
+      const elapsed = now - start;
+      const maxSpeed = Math.max(...items.map(({ body }) => Math.hypot(body.velocity.x, body.velocity.y)));
+      const done = (maxSpeed < 0.8 && elapsed > 2000) || elapsed > 9000;
+
+      if (!done) { rafId = requestAnimationFrame(step); return; }
       cancelAnimationFrame(rafId);
-      rogue.style.transition = 'left 0.7s cubic-bezier(0.4, 0, 0.2, 1), top 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
-      rogue.style.left = rect.left + 'px';
-      rogue.style.top = rect.top + 'px';
+
+      // animate back to home positions while still fixed
+      items.forEach(({ el, home }) => {
+        el.style.transition = 'left 0.9s cubic-bezier(0.4, 0, 0.2, 1), top 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s ease';
+        el.style.left = home.left + 'px';
+        el.style.top = home.top + 'px';
+        el.style.transform = 'rotate(0deg)';
+      });
+
       setTimeout(() => {
-        circle.style.opacity = '';
-        rogue.remove();
-      }, 700);
-      return;
+        items.forEach(({ el, savedStyle }) => {
+          if (savedStyle) el.setAttribute('style', savedStyle);
+          else el.removeAttribute('style');
+        });
+        isFalling = false;
+      }, 950);
     }
 
     rafId = requestAnimationFrame(step);
-  }
-
-  rafId = requestAnimationFrame(step);
+  }, 1000);
 }
 
 document.addEventListener('keydown', (e) => {
-  if (e.code === 'Space' && !document.querySelector('.name-circle').style.opacity) circleGoesRogue();
+  if (e.code === 'Space') everythingFalls();
 });
 
-function scheduleRogue() {
-  setTimeout(() => {
-    circleGoesRogue();
-    scheduleRogue();
-  }, 20000 + Math.random() * 15000);
-}
-
-scheduleRogue();
 
 const allPills = document.querySelectorAll('.pill');
 
