@@ -10,7 +10,7 @@
 :root {
   --font-size: 14px;
   --font: 'JetBrains Mono', monospace;
-  --font-color: #fff;
+  --font-color: hsl(41, 60%, 88%);
   --accent: rgba(136, 160, 211, 1);
   --border-color: rgba(255, 255, 255, 0.2);
   --border-color-subtle: rgba(255, 255, 255, 0.15);
