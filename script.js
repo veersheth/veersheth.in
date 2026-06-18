@@ -1,26 +1,3 @@
-function scramble(el) {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*?';
-  const original = el.textContent;
-  const duration = 2000;
-  const frameRate = 35;
-  const totalFrames = duration / frameRate;
-  let frame = 0;
-
-  const interval = setInterval(() => {
-    el.textContent = original.split('').map((char, i) => {
-      if (char === ' ') return ' ';
-      if (frame >= (i / original.length) * totalFrames) return char;
-      return chars[Math.floor(Math.random() * chars.length)];
-    }).join('');
-
-    if (++frame > totalFrames) {
-      el.textContent = original;
-      clearInterval(interval);
-    }
-  }, frameRate);
-}
-
-setTimeout(() => scramble(document.querySelector('.about')), 300);
 
 document.querySelector('.copy-email').addEventListener('click', function () {
   const email = this.dataset.email;
@@ -46,9 +23,67 @@ function everythingFalls() {
   if (isFalling) return;
   isFalling = true;
 
-  const els = [...document.querySelectorAll('.name-row, .about, .links, .project-card, .pill, .heading, .projects-btn')];
+  const els = [...document.querySelectorAll('.name-row, .about, .links, .project-card, .pill, .heading, .projects-btn, .footer')];
   const savedStyles = els.map(el => el.getAttribute('style') || '');
   const homeRects = els.map(el => el.getBoundingClientRect());
+
+  const hand = document.createElement('pre');
+  hand.style.cssText = `
+    position: fixed; top: 90%; left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 10000; pointer-events: none;
+    font-family: monospace; font-size: 7px; line-height: 1.2;
+    color: red; opacity: 0;
+    transition: opacity 0.4s ease;
+    white-space: pre;
+  `;
+  hand.textContent = `
+                                     .....                 ....                                          
+                                    :::...                .......                                        
+                                    .-:.... .             :......                                        
+                                     .:.......            :......                                        
+                                      -::::::...          .......                                        
+                                      .-=-:::..:         ::::::::.                                       
+                        :...           :--:::....        :::::::::                                       
+                       :--::...         =--:::...        ::...::-:                                       
+                       .==-:.....        =--:::::.       :....::-:                                       
+                         -=-:::::::.     -=--::.:..     .::...::-:                                       
+                          :=-=:::::::     ==--:..:..    ......:--:                                       
+                           .=-==-::..:    .---::.....   ......::::                                       
+                             ====--:....   ::-::::.............:::                                       
+                              :====--:........:-:.:...........::::.                                      
+                               .=+=----....:.:::..::...::.:.:-:::::                                      
+                                .=-:----:....:::.........:..:::::--                                      
+                                 .:::::--:.:.:::...::.:....::::::::                                      
+                             .::::....:-=:....::....:.....::::::::-                                      
+                      .::---=--:--::...::-:.:.:..........:::...:::-                                      
+            -::==-----==========-::::...::::.::.........:::...::::-:                                     
+            -=+=+==+++++====++===-::::::..::::::.......::......:---::                                    
+             :----================--::::::::::::......:::::....::----.                                   
+                   ..::::::==+====-----::::::::......:::::::::::::----                                   
+                           .==+===----:::::..................::::---:-                                   
+                            -=====--::::::::::.............::::--------.                                 
+                             -=====-:::::::..............:::::---=====---.                               
+                             :=-==-:::::::::.......:..::::::::---====-==--::...                          
+                              --=-::::::::.......::::::::---------========-::::::::.::::..               
+                               ::::::::::::::::::::::::::-------=-======+++++===============--:          
+                            ..::::::::::::::::::::::::---------==---===-++*****++++*+++++++=----:        
+                         .:::::::::::::::::::::::::::----------=----==-=++*******+***++++**==-===.       
+                     .:-::::::::::::::::::::::::::::------===-------=--+++++====++++++++++==---=.        
+                 ..:::::::-::::::::::::::::::::----------------------.                                   
+            ..:::::::::::::::::::::::::::::::::::---------------=--:                                     
+        .::--:--------:------------------------::------------:-:                                         
+    .:----------------------------------------------------::.                                            
+ .:-------------------------------------------------------:.                                             
+---------------------------------------------------------::.......                                       
+=-----------------------------==-======---------------::::::......                                       
+=----------------------------=================---------:::::::.....                                      
+==--------------------==========================-------:::::.....                                        
+=========---------================================-----:::::....                                         
+
+==---:..::::....`;
+  document.body.appendChild(hand);
+  requestAnimationFrame(() => { hand.style.opacity = '1'; });
 
   // phase 1: rise with shake
   els.forEach(el => {
@@ -104,6 +139,9 @@ function everythingFalls() {
         Bodies.rectangle(-T / 2, H / 2,    T, H * 2, { isStatic: true }),
         Bodies.rectangle(W + T / 2, H / 2, T, H * 2, { isStatic: true }),
       ]);
+
+      hand.style.opacity = '0';
+      setTimeout(() => hand.remove(), 400);
 
       const items = els.map((el, i) => {
         const { w, h, left, top } = dims[i];
