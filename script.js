@@ -22,6 +22,7 @@ let isFalling = false;
 function everythingFalls() {
   if (isFalling) return;
   isFalling = true;
+  document.body.classList.add('vader-active');
 
   const els = [...document.querySelectorAll('.name-row, .about, .links, .project-card, .pill, .heading, .projects-btn, .footer')];
   const savedStyles = els.map(el => el.getAttribute('style') || '');
@@ -205,6 +206,7 @@ function everythingFalls() {
             if (savedStyle) el.setAttribute('style', savedStyle);
             else el.removeAttribute('style');
           });
+          document.body.classList.remove('vader-active');
           isFalling = false;
         }, 950);
       }
@@ -217,6 +219,8 @@ function everythingFalls() {
 document.addEventListener('keydown', (e) => {
   if (e.code === 'Space') everythingFalls();
 });
+
+document.querySelector('.footer').addEventListener('click', everythingFalls);
 
 
 const allPills = document.querySelectorAll('.pill');
