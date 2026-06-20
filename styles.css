@@ -8,7 +8,7 @@
 }
 
 :root {
-  --font-size: 15px;
+  --font-size: 14px;
   --font: 'JetBrains Mono', monospace;
   --font-color: hsl(41, 60%, 88%);
   --accent: rgba(136, 160, 211, 1);

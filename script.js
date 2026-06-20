@@ -1,13 +1,4 @@
 
-document.querySelector('.copy-email').addEventListener('click', function () {
-  const email = this.dataset.email;
-  navigator.clipboard.writeText(email).then(() => {
-    const toast = document.getElementById('toast');
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2000);
-  });
-});
-
 const projectsList = document.querySelector('.projects-list');
 document.querySelector('.projects-prev').addEventListener('click', () => {
   projectsList.scrollBy({ left: -projectsList.querySelector('.project-card').offsetWidth, behavior: 'smooth' });
